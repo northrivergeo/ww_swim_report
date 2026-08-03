@@ -1,0 +1,9 @@
+Sample,Location,Date,Time,pH,Temperature,Nitrates,Phosphates,Key,Notes
+MC,Middle Creek,06/10/2026,6:00 PM,7.6,71.3,5,1.0,Within Normal Range/Moderate Range,
+MC,Middle Creek,6/17/2026,12:00 PM,7.9,67.5,5,1.0,Within Normal Range/Moderate Range,"Site murky, slightly turbid. Moderate stream flow, intact stream bank"
+MC,Middle Creek,06/24/2026,11:00 AM,7.6,66.2,5,1.0,Within Normal Range/Moderate Range,"Site barely murky, moderate flow, intact stream bank"
+MC,Middle Creek,7/1/2026,1:20 PM,8.2,68.7,5,1.0,Within Normal Range/Moderate Concern,
+MC,Middle Creek,7/8/2026,5:00 PM,8.3,68.9,5,2.0,Within Normal Range/Moderate Concern,
+MC,Middle Creek,7/15/2026,1:25 PM,8.4,68.7,5,1.0,,
+MC,Middle Creek,7/22/2026,1:30 PM,8.3,71.4,5,0.5,,
+MC,Middle Creek,7/29/2026,3:20 PM,8.3,72.7,5,1.0,,

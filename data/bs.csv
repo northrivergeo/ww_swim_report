@@ -1,0 +1,9 @@
+Sample,Location,Date,Time,pH,Temperature,Nitrates,Phosphates,Key,Notes
+BS,Big Soddy,06/10/2026,4:20 PM,7.2,77.0,5,1.0,Within Normal Range/High Concern,
+BS,Big Soddy,6/17/2026,9:40 AM,7.8,68.9,5,1.0,Within Normal Range/Moderate Range,
+BS,Big Soddy,6/24/2026,5:00 PM,8.0,75.6,3,1.5,Within Normal Range/High Concern,0
+BS,Big Soddy,7/1/2026,9:55 AM,8.2,77.2,9,1.5,Within Normal Range/High Concern,
+BS,Big Soddy,7/8/2026,9:30 AM,8.0,73.1,7,1.5,Within Normal Range/Moderate Concern,Site a little turbid
+BS,Big Soddy,7/15/2026,1:40 PM,7.9,75.7,5,1.5,,Raining during sample collection
+BS,Big Soddy,7/22/2026,5:45 AM,7.9,84.4,7,1.0,,
+BS,Big Soddy,7/29/2026,9:50 AM,7.9,77.0,9,1.5,,Water level lower than usual

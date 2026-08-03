@@ -1,0 +1,49 @@
+Sample,Location,Date,Time,pH,Temperature,Nitrates,Phosphates,Key,Notes
+AA,Audubon Acres,6/10/2026,2:25 PM,8,0,5,2,Within Normal Range/Error,Site is very turbid and muddy
+GW,Greenway,6/10/2026,3:35 PM,8.2,89.1,5,2,Within Normal Range/High Concern,
+BS,Big Soddy,06/10/2026,4:20 PM,7.2,77,5,1,Within Normal Range/High Concern,
+SC,Suck Creek,06/10/2026,5:45 PM,7.7,72.2,5,2,Within Normal Range/Moderate Range,
+MC,Middle Creek,06/10/2026,6:00 PM,7.6,71.3,5,1,Within Normal Range/Moderate Range,
+RL,Rainbow Lake,6/10/26,6:30 PM,7.5,0,0,1,Within Normal Range/Error,
+AA,Audubon Acres,6/17/2026,1:01 PM,8,76.1,5,1,Within Normal Range/High Concern,"Site very turbid, a significant amount of suspended particles. Fast flow, some erosion along steam bank"
+GW,Greenway,6/17/26,8:15 AM,7.7,78.1,5,2,Within Normal Range/High Concern,
+BS,Big Soddy,6/17/2026,9:40 AM,7.8,68.9,5,1,Within Normal Range/Moderate Range,
+SC,Suck Creek,6/17/2026,11:34 AM,7.6,67.7,5,1,Within Normal Range/Moderate Concern,Site had very clear waters with almost no sediment deposits. Intact stream bank 
+MC,Middle Creek,6/17/2026,12:00 PM,7.9,67.5,5,1,Within Normal Range/Moderate Range,"Site murky, slightly turbid. Moderate stream flow, intact stream bank"
+RL,Rainbow Lake,6/17/2026,12:00 PM,7.4,68.5,5,1.5,Within Normal Range/Moderate Range,
+AA,Audubon Acres,6/24/2026,12:30 PM,8.3,73.6,5,1,Within Normal Range/Moderate Range,
+GW,Greenway,6/24/2026,3:40 PM,8.8,84.2,5,1,Within Normal Range/High Concern,
+BS,Big Soddy,6/24/2026,5:00 PM,8,75.6,3,1.5,Within Normal Range/High Concern,0
+SC,Suck Creek,6/24/2026,6:30 PM,8.1,70.9,7,0.5,Within Normal Range/Moderate Range,
+MC,Middle Creek,06/24/2026,11:00 AM,7.6,66.2,5,1,Within Normal Range/Moderate Range,"Site barely murky, moderate flow, intact stream bank"
+RL,Rainbow Lake,6/24/26,4:45 PM,7.2,75,5,2,Within Normal Range/Moderate Range,Super high visibility/ low turbidity 
+AA,Audubon Acres,7/1/2026,12:25 PM,8.3,81.7,4,2,Within Normal Range/High Concern,
+GW,Greenway,7/1/2026,8:55 AM,8.2,82.6,7,1.5,Within Normal Range/High Concern,
+BS,Big Soddy,7/1/2026,9:55 AM,8.2,77.2,9,1.5,Within Normal Range/High Concern,
+SC,Suck Creek,7/1,3:25 PM,7.9,82.6,5,2,Within Normal Range/High Concern,
+MC,Middle Creek,7/1/2026,1:20 PM,8.2,68.7,5,1,Within Normal Range/Moderate Concern,
+RL,Rainbow Lake,7/1/2026,4:15 PM,7.7,82.6,5,1.5,Within Normal Range/High Concern,
+AA,Audubon Acres,7/8/2026,4:00 PM,8.4,83.3,5,1.5,Within Normal Range/High Concern,
+GW,Greenway,7/8/2026,8:30 AM,8.2,83.7,5,1,Within Normal Range/High Concern,
+BS,Big Soddy,7/8/2026,9:30 AM,8,73.1,7,1.5,Within Normal Range/Moderate Concern,Site a little turbid
+SC,Suck Creek,7/8/26,1:50 PM,7.9,81.5,4,3,Within Normal Range/High Concern,Very dried out
+MC,Middle Creek,7/8/2026,5:00 PM,8.3,68.9,5,2,Within Normal Range/Moderate Concern,
+RL,Rainbow Lake,7/8/26,1:10 PM,8.1,77.7,4,1,Within Normal Range/High Concern,Murky and smelled 
+AA,Audubon Acres,7/15/2026,12:10 PM,8.3,76.1,8,2,,"Very fast moving water, slightly murky"
+GW,Greenway,7/15/2026,8:10 AM,7.9,82,7,1.5,,Site is clear and unmoving
+BS,Big Soddy,7/15/2026,1:40 PM,7.9,75.7,5,1.5,,Raining during sample collection
+SC,Suck Creek,7/15/2026,1:55 PM,7.9,77.4,5,4,,
+MC,Middle Creek,7/15/2026,1:25 PM,8.4,68.7,5,1,,
+RL,Rainbow Lake,7/15/2026,1:05 PM,8.1,75.6,5,4,,"Slow moving, waterfall had minimal flow, low visibility "
+AA,Audubon Acres,7/22/2026,12:20 PM,8.2,81.1,5,1,,
+GW,Greenway,7/22/2026,4:30 AM,8,90,8,1,,
+BS,Big Soddy,7/22/2026,5:45 AM,7.9,84.4,7,1,,
+SC,Suck Creek,7/22/2026,3:30 PM,7.8,80.2,4,1,,
+MC,Middle Creek,7/22/2026,1:30 PM,8.3,71.4,5,0.5,,
+RL,Rainbow Lake,7/22/2026,2:40 PM,8.2,77.5,4,4,,
+AA,Audubon Acres,7/29/2026,2:20 PM,8.5,84.7,5,1,,
+GW,Greenway,7/29/2026,8:20 AM,8.1,84.7,7,0.5,,"Normal conditions, a bit turbid"
+BS,Big Soddy,7/29/2026,9:50 AM,7.9,77,9,1.5,,Water level lower than usual
+SC,Suck Creek,7/29/2026,5:20 PM,7.8,75,5,1.5,,
+MC,Middle Creek,7/29/2026,3:20 PM,8.3,72.7,5,1,,
+RL,Rainbow Lake,7/29/2026,4:45 PM,8.2,81,5,4,,

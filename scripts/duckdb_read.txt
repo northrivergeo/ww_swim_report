@@ -1,0 +1,21 @@
+#read the Table into DuckDB 
+
+create table sample as from 'data/data.csv'; 
+
+#copy AA to aa.csv 
+copy (select * from sample where sample = 'AA') to 'aa.csv';
+
+#copy GW to gw.csv 
+copy (select * from sample where sample = 'GW') to 'gw.csv';
+
+#copy BS to bs.csv 
+copy (select * from sample where sample = 'BS') to 'bs.csv';
+
+#copy SC to sc.csv 
+copy (select * from sample where sample = 'SC') to 'sc.csv';
+
+#copy MC to mc.csv 
+copy (select * from sample where sample = 'MC') to 'mc.csv';
+
+#copy RL to rl.csv 
+copy (select * from sample where sample = 'RL') to 'rl.csv';

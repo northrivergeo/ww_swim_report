@@ -1,0 +1,9 @@
+Sample,Location,Date,Time,pH,Temperature,Nitrates,Phosphates,Key,Notes
+AA,Audubon Acres,6/10/2026,2:25 PM,8.0,0.0,5,2.0,Within Normal Range/Error,Site is very turbid and muddy
+AA,Audubon Acres,6/17/2026,1:01 PM,8.0,76.1,5,1.0,Within Normal Range/High Concern,"Site very turbid, a significant amount of suspended particles. Fast flow, some erosion along steam bank"
+AA,Audubon Acres,6/24/2026,12:30 PM,8.3,73.6,5,1.0,Within Normal Range/Moderate Range,
+AA,Audubon Acres,7/1/2026,12:25 PM,8.3,81.7,4,2.0,Within Normal Range/High Concern,
+AA,Audubon Acres,7/8/2026,4:00 PM,8.4,83.3,5,1.5,Within Normal Range/High Concern,
+AA,Audubon Acres,7/15/2026,12:10 PM,8.3,76.1,8,2.0,,"Very fast moving water, slightly murky"
+AA,Audubon Acres,7/22/2026,12:20 PM,8.2,81.1,5,1.0,,
+AA,Audubon Acres,7/29/2026,2:20 PM,8.5,84.7,5,1.0,,

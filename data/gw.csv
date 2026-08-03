@@ -1,0 +1,9 @@
+Sample,Location,Date,Time,pH,Temperature,Nitrates,Phosphates,Key,Notes
+GW,Greenway,6/10/2026,3:35 PM,8.2,89.1,5,2.0,Within Normal Range/High Concern,
+GW,Greenway,6/17/26,8:15 AM,7.7,78.1,5,2.0,Within Normal Range/High Concern,
+GW,Greenway,6/24/2026,3:40 PM,8.8,84.2,5,1.0,Within Normal Range/High Concern,
+GW,Greenway,7/1/2026,8:55 AM,8.2,82.6,7,1.5,Within Normal Range/High Concern,
+GW,Greenway,7/8/2026,8:30 AM,8.2,83.7,5,1.0,Within Normal Range/High Concern,
+GW,Greenway,7/15/2026,8:10 AM,7.9,82.0,7,1.5,,Site is clear and unmoving
+GW,Greenway,7/22/2026,4:30 AM,8.0,90.0,8,1.0,,
+GW,Greenway,7/29/2026,8:20 AM,8.1,84.7,7,0.5,,"Normal conditions, a bit turbid"
