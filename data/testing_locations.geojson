@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "testing_locations",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{"type":"Feature","properties":{"name":"Rainbow Lake Trail","description":null},"geometry":{"type":"Point","coordinates":[-85.3655133,35.1286262]}},
+{"type":"Feature","properties":{"name":"Audubon Acres","description":null},"geometry":{"type":"Point","coordinates":[-85.1802664,34.99714]}},
+{"type":"Feature","properties":{"name":"Middle Creek","description":null},"geometry":{"type":"Point","coordinates":[-85.3730491,35.1206032]}},
+{"type":"Feature","properties":{"name":"Suck Creek","description":null},"geometry":{"type":"Point","coordinates":[-85.3919763,35.1475093]}},
+{"type":"Feature","properties":{"name":"Greenway Farm Quarry","description":null},"geometry":{"type":"Point","coordinates":[-85.2205268,35.1207527]}},
+{"type":"Feature","properties":{"name":"Big Soddy Creek Gulf","description":null},"geometry":{"type":"Point","coordinates":[-85.1735343,35.298802]}}
+]
+}
