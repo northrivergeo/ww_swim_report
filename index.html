@@ -42,9 +42,9 @@
 	    ///////////////////////////Define a Style Function for GeoJSON Watershed polygons
             function wsstyle(feature) {
                 return {
-                    weight: 1,
+                    weight: 4,
                     opacity: 1,
-                    color: 'black',
+                    color: 'orange',
                     fillOpacity: 0
                 };
             }
@@ -61,7 +61,7 @@
                 } 
              }).addTo(map);
              $.getJSON('https://northrivergeo.github.io/ww_swim_report/data/huc12.geojson', function(data) {
-                  ww_geojsonLayer.addData(data);
+                  ws_geojsonLayer.addData(data);
              });
 
 
