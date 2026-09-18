@@ -28,7 +28,7 @@
             }).addTo(map);
            
 	    ///////////////////////////Define a Style Function for GeoJSON Water Sampling Sites
-            function wwbrstyle(feature) {
+            function wwstyle(feature) {
                 return {
                     fillColor: "blue",
 		    radius: 10, 	
@@ -40,14 +40,29 @@
 	    }
 	    
 	    ///////////////////////////Define a Style Function for GeoJSON Watershed polygons
-            function wwbrstyle(feature) {
+            function wsstyle(feature) {
                 return {
                     weight: 1,
-                    opacity: 01,
+                    opacity: 1,
                     color: 'black',
-                    fillOpacity: 0.7
+                    fillOpacity: 0
                 };
             }
+
+            //////////////////////////// Create a Watershed GeoJSON layer
+             var ws_geojsonLayer = L.geoJson(null, {
+                 style: wsstyle,
+                 onEachFeature: function(feature, layer) {
+                     layer.bindPopup(feature.properties.name); 
+               },
+		pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, {
+	         }); 
+                } 
+             }).addTo(map);
+             $.getJSON('https://northrivergeo.github.io/ww_swim_report/data/huc12.geojson', function(data) {
+                  ww_geojsonLayer.addData(data);
+             });
 
 
             //////////////////////////// Create a Water Sampling GeoJSON layer
@@ -62,7 +77,7 @@
                 } 
              }).addTo(map);
              $.getJSON('https://northrivergeo.github.io/ww_swim_report/data/testing_locations.geojson', function(data) {
-                  br_geojsonLayer.addData(data);
+                  ww_geojsonLayer.addData(data);
              });
 
 
