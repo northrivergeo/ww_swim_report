@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,9 +26,9 @@
                 maxZoom: 24,
                 attribution: '© OpenStreetMap'
             }).addTo(map);
-            
-	    ///////////////////////////Define a Style Function for GeoJSON
-            function brstyle(feature) {
+           
+	    ///////////////////////////Define a Style Function for GeoJSON Water Sampling Sites
+            function wwbrstyle(feature) {
                 return {
                     fillColor: "blue",
 		    radius: 10, 	
@@ -39,10 +39,20 @@
                 };
 	    }
 	    
+	    ///////////////////////////Define a Style Function for GeoJSON Watershed polygons
+            function wwbrstyle(feature) {
+                return {
+                    weight: 1,
+                    opacity: 01,
+                    color: 'black',
+                    fillOpacity: 0.7
+                };
+            }
 
-            //////////////////////////// Create a BR GeoJSON layer
-             var br_geojsonLayer = L.geoJson(null, {
-                 style: brstyle,
+
+            //////////////////////////// Create a Water Sampling GeoJSON layer
+             var ww_geojsonLayer = L.geoJson(null, {
+                 style: wwstyle,
                  onEachFeature: function(feature, layer) {
                      layer.bindPopup(feature.properties.name); 
                },
@@ -57,18 +67,30 @@
 
 
             ////////////////////////////// Layer control
-            var baseMaps = {
-                  "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            //var osmmaps = {
+            //      "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            //      maxZoom: 24,
+            //      attribution: '© OpenStreetMap'
+            //     })
+            //};
+            
+	    ////////////////////////////// Layer control
+            var tnimagemap = {
+	         "TDOT Imagery": L.tileLayer.wms('https://tnmap.tn.gov/arcgis/services/BASEMAPS/IMAGERY_WEB_MERCATOR/MapServer/WMSServer',  {
                   maxZoom: 24,
                   attribution: '© OpenStreetMap'
                  })
             };
 
+
+            var overlayMaps = {
+                "Water Sampling": ww_geojsonLayer,
+                "South Chick Greenway": sc_geojsonLayer
+               };
+
+            L.control.layers(baseMaps, overlayMaps).addTo(map); 
+
         });
     </script>
 </body>
 </html>
-
-
-
-
