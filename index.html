@@ -81,13 +81,13 @@
              });
 
 
-            ////////////////////////////// Layer control
-            //var osmmaps = {
-            //      "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            //      maxZoom: 24,
-            //      attribution: '© OpenStreetMap'
-            //     })
-            //};
+            //////////////////////////// Layer control
+            var osmmaps = {
+                  "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                  maxZoom: 24,
+                  attribution: '© OpenStreetMap'
+                 })
+            };
             
 	    ////////////////////////////// Layer control
             var tnimagemap = {
@@ -103,7 +103,12 @@
                 "12 Digit Hucs": ws_geojsonLayer
                };
 
-            L.control.layers(tnimagemap, overlayMaps).addTo(map); 
+		var basemaps = { 
+                   "TDOT Imager": tnimagemap,
+	           "OpenStreetMap":osmmaps
+	      };
+
+            L.control.layers(basemaps, overlayMaps).addTo(map); 
 
         });
     </script>
