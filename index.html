@@ -1,37 +1,42 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WaterWays</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <style>
-        #map {
-            height: 900px;
-            width: 100%;
-        }
+       body { margin:0; padding:0; }
+       #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+       #map-title { position: relative; margin-top: 10px; margin-left: 50px; float: left; background: white; border: 2px solid rgba(0,0,0,0.2); padding: 6px 8px; font-family: Helvetica; font-weight: bold; font-size: 24px; z-index: 800; }
     </style>
 </head>
 <body>
     <div id="map"></div>
     <script>
-        $(document).ready(function() {
+	    $(document).ready(function() {
             // Initialize the Map
-            var map = L.map('map').setView([35.16392,-85.27877], 11); // Center the map  35.04756,-85.30398
+            //var map = L.map('map').setView([35.16392,-85.27877], 11); // Center the map 
+            var map = L.map('map', {
+            center: [35.16392,-85.27877],
+            zoom: 11
+            });
 
             // Add a Tile Layer
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 24,
                 attribution: '© OpenStreetMap'
             }).addTo(map);
+
            
 	    ///////////////////////////Define a Style Function for GeoJSON Water Sampling Sites
             function wwstyle(feature) {
                 return {
                     fillColor: "blue",
-		    radius: 10, 	
+		    radius: 20, 	
                     weight: 1,
                     opacity: 1,
                     color: 'black',
@@ -49,7 +54,8 @@
                 };
             }
 
-            //////////////////////////// Create a Watershed GeoJSON layer
+
+	    //////////////////////////// Create a Watershed GeoJSON layer
              var ws_geojsonLayer = L.geoJson(null, {
                  style: wsstyle,
                  onEachFeature: function(feature, layer) {
@@ -59,13 +65,13 @@
                     return L.circleMarker(latlng, {
 	         }); 
                 } 
-             }).addTo(map);
+             //}).addTo(map);
+             });
              $.getJSON('https://northrivergeo.github.io/ww_swim_report/data/huc12.geojson', function(data) {
                   ws_geojsonLayer.addData(data);
              });
-
-
-            //////////////////////////// Create a Water Sampling GeoJSON layer
+            
+	    //////////////////////////// Create a Water Sampling GeoJSON layer
              var ww_geojsonLayer = L.geoJson(null, {
                  style: wwstyle,
                  onEachFeature: function(feature, layer) {
@@ -81,36 +87,42 @@
              });
 
 
-            //////////////////////////// Layer control
-            var osmmaps = {
-                  "OpenStreetMap": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                  maxZoom: 24,
-                  attribution: '© OpenStreetMap'
-                 })
-            };
-            
-	    ////////////////////////////// Layer control
-            var tnimagemap = {
-	         "TDOT Imagery": L.tileLayer.wms('https://tnmap.tn.gov/arcgis/services/BASEMAPS/IMAGERY_WEB_MERCATOR/MapServer/WMSServer',  {
-                  maxZoom: 24,
-                  attribution: '© OpenStreetMap'
-                 })
-            };
 
+            //////////////////////////// Layer control
+	    var osmhot = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+                 maxZoom: 19,
+                 attribution: '© OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team hosted by OpenStreetMap France'});
+            
+	    var osm = 
+		  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                  maxZoom: 24,
+                 attribution: '© OpenStreetMap'
+                });
+             
+
+	    ////////////////////////////// Layer control
+            //var tnimagemap = {
+	    //     "NAIP Imagery": L.tileLayer.wms('https://imagery.nationalmap.gov/arcgis/services/USGSNAIPImagery/ImageServer/WMSServer?',  {
+	    //      layers: 'USGSNAIPImagery:NaturalColor',
+	    //         format: "image/png",
+	    //         transparent: true
+            //       })
+            //    };
+              
+            var baseMaps = {
+		"OpenStreetMap": osm,
+		"Humanitarian OpenStreetMap": osmhot
+	        };
 
             var overlayMaps = {
                 "Water Sampling": ww_geojsonLayer,
                 "12 Digit Hucs": ws_geojsonLayer
                };
 
-		var basemaps = { 
-                   "TDOT Imager": tnimagemap,
-	           "OpenStreetMap":osmmaps
-	      };
+	    L.control.layers(baseMaps, overlayMaps, {collapsed: false}).addTo(map); 
 
-            L.control.layers(basemaps, overlayMaps).addTo(map); 
+	  });
 
-        });
     </script>
 </body>
 </html>
